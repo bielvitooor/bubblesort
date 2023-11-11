@@ -4,27 +4,13 @@ public class BubbleSortExample {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
 
-        int[] randomNumbers = new int[250000];
+        int[] randomNumbers = new int[70000];
         Random rand = new Random();
 
-        for (int i = 0; i < 250000; i++) {
-            randomNumbers[i] = rand.nextInt(250000) + 1; // Gera números entre 1 e 1.000.000
+        for (int i = 0; i < 70000; i++) {
+            randomNumbers[i] = rand.nextInt(70000) + 1; // Gera números entre 1 e 1.000.000
         }
-
-       // System.out.print("Números em ordem aleatória: ");
-        //for (int num : randomNumbers) {
-        //    System.out.print(num + ", ");
-        //}77.336 segundos
-        //System.out.println();
-
         int[] sortedArray = bubbleSort(randomNumbers);
-
-        /*System.out.print("Array ordenado: ");
-        for (int num : sortedArray) {
-            System.out.print(num + ", ");
-        }
-        System.out.println();*/
-
         long endTime = System.currentTimeMillis();
         double executionTime = (endTime - startTime) / 1000.0;
 

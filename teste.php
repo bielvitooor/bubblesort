@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
 function bubbleSort($arr) {
     $n = count($arr);
@@ -23,32 +19,17 @@ function bubbleSort($arr) {
     return $arr;
 }
 
-// Registra o tempo inicial
 $start_time = microtime(true);
 
 $randomNumbers = array();
 
-for ($i = 0; $i < 250000; $i++) {
-    $randomNumbers[] = rand(1,250000);
+for ($i = 0; $i < 70000; $i++) {
+    $randomNumbers[] = rand(1,70000);
 }
-
-// Imprime os números em ordem aleatória
-//echo "Números em ordem aleatória: " . implode(", ", $randomNumbers) . "<br>";
 $sortedArray = bubbleSort($randomNumbers);
-
-// Registra o tempo final
 $end_time = microtime(true);
 
-echo "Array ordenado: ";
-foreach ($sortedArray as $value) {
-    echo $value . " ";
-}
-
-// Calcula o tempo decorrido
 $execution_time = ($end_time - $start_time);
 
-echo "<br>Tempo de execução: " . $execution_time . " segundos";
+echo "Tempo de execução: " . $execution_time . " segundos";
 ?>
-
-</body>
-</html>
